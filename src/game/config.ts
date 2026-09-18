@@ -92,3 +92,51 @@ export const COLORS = {
   bug: "#FFE27A",
   viernes: "#C81E3A",
 } as const;
+
+// Bots (DESIGN.md §6.3). La velocidad se multiplica por BOT_SPEED_SCALE.
+export type BotStrategy = "nearest" | "bestValue" | "mostPoints";
+
+export interface BotPersonality {
+  speed: number;
+  /** Segundos entre cambios de objetivo. */
+  retargetEvery: number;
+  strategy: BotStrategy;
+  /** Probabilidad de distraerse y nadar sin rumbo al elegir objetivo. */
+  wanderChance: number;
+  /** Probabilidad de comerse el "deploy en viernes" (P1). */
+  fridayChance: number;
+}
+
+export const BOT_PERSONALITIES: Record<"react" | "vue" | "angular" | "svelte", BotPersonality> = {
+  react: { speed: 215, retargetEvery: 0.4, strategy: "nearest", wanderChance: 0, fridayChance: 0 },
+  vue: { speed: 195, retargetEvery: 0.8, strategy: "bestValue", wanderChance: 0, fridayChance: 0 },
+  angular: {
+    speed: 160,
+    retargetEvery: 1.2,
+    strategy: "mostPoints",
+    wanderChance: 0,
+    fridayChance: 0,
+  },
+  svelte: {
+    speed: 230,
+    retargetEvery: 0.6,
+    strategy: "nearest",
+    wanderChance: 0.15,
+    fridayChance: 0.2,
+  },
+};
+
+/** Retraso de reacción al elegir un objetivo nuevo, en segundos. */
+export const BOT_REACTION_MIN = 0.15;
+export const BOT_REACTION_MAX = 0.3;
+/** Probabilidad de ignorar un bug por completo. */
+export const BOT_IGNORE_CHANCE = 0.1;
+/** Suavizado de dirección de los bots (el jugador usa PLAYER_STEER). */
+export const BOT_STEER = 6;
+/** Distancia mínima entre el jugador y los bots al iniciar. */
+export const BOT_SPAWN_CLEARANCE = 90;
+/** Distancia extra que "ve" un bot en un bug que ya persigue otro bot. */
+export const BOT_CROWD_PENALTY = 70;
+/** Distancia mínima entre bots antes de empujarse suavemente. */
+export const BOT_SEPARATION = 34;
+export const BOT_SEPARATION_PUSH = 40;

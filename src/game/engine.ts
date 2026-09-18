@@ -41,6 +41,7 @@ import {
   ZIGZAG_HZ,
   ZIGZAG_SIDE_SPEED,
 } from "./config";
+import { createBots, separateBots, updateBotBrains, type Bot } from "./bots";
 import {
   bugExpired,
   bugOffscreen,
@@ -81,6 +82,7 @@ interface DecorBubble {
 interface RoundState {
   config: PlayerConfig;
   player: Axolotl;
+  bots: Bot[];
   axolotls: Axolotl[];
   bugs: Bug[];
   tracker: RoundTracker;
@@ -132,10 +134,14 @@ export function startRound(
     y: WORLD_H * 0.7,
   });
 
+  const bots = createBots(player);
+
   const state: RoundState = {
     config,
     player,
-    axolotls: [player],
+    bots,
+    // Los bots primero y el jugador al final, para que se dibuje encima.
+    axolotls: [...bots.map((b) => b.axolotl), player],
     bugs: [],
     tracker: createTracker(),
     elapsed: 0,
@@ -144,6 +150,11 @@ export function startRound(
     paused: false,
     finished: false,
   };
+
+  // Con ?debug en la URL se expone el estado de la ronda, solo para calibrar.
+  if (new URLSearchParams(location.search).has("debug")) {
+    (window as unknown as { __ajolotesRound?: RoundState }).__ajolotesRound = state;
+  }
 
   // Por si el camerino no alcanzó a rasterizar.
   void prepareSprite(config.stack, config.accessory).catch(() => {});
@@ -249,7 +260,9 @@ export function startRound(
   function update(dt: number) {
     state.elapsed += dt;
 
-    updateAxolotl(player, dt);
+    updateBotBrains(state.bots, state.bugs, dt, state.elapsed);
+    for (const a of state.axolotls) updateAxolotl(a, dt);
+    separateBots(state.bots, dt);
     trackIdle(state.tracker, Math.hypot(player.vx, player.vy), dt);
 
     // Aparición de bugs
@@ -280,8 +293,10 @@ export function startRound(
       }
     }
 
-    // Colisiones: boca contra burbuja
-    for (const a of state.axolotls) {
+    // Colisiones: boca contra burbuja. El jugador va al final de la lista,
+    // así que se revisa primero: si llega junto con un bot, gana él.
+    for (let i = state.axolotls.length - 1; i >= 0; i--) {
+      const a = state.axolotls[i];
       const mx = a.x + MOUTH_OFFSET_X * a.dir;
       const my = a.y;
       for (const bug of state.bugs) {
