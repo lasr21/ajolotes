@@ -14,6 +14,7 @@ import {
   HUD_FONT,
   HUD_PAD,
   HUD_TIME_FONT,
+  INITIAL_BUGS,
   LABEL_FONT,
   LABEL_GAP,
   MAX_BUGS,
@@ -135,6 +136,8 @@ export function startRound(
   });
 
   const bots = createBots(player);
+  const initialBugs: Bug[] = [];
+  for (let i = 0; i < INITIAL_BUGS; i++) initialBugs.push(createBug(pickBugType(), measureText));
 
   const state: RoundState = {
     config,
@@ -142,7 +145,7 @@ export function startRound(
     bots,
     // Los bots primero y el jugador al final, para que se dibuje encima.
     axolotls: [...bots.map((b) => b.axolotl), player],
-    bugs: [],
+    bugs: initialBugs,
     tracker: createTracker(),
     elapsed: 0,
     spawnTimer: 0,

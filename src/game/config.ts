@@ -27,11 +27,13 @@ export const TOUCH_OFFSET_Y = 36;
 
 // Bots
 export const BOT_COUNT = 11;
-export const BOT_SPEED_SCALE = 1.0;
+export const BOT_SPEED_SCALE = 0.9;
 
 // Bugs
-export const MAX_BUGS = 14;
-export const SPAWN_EVERY = 0.35;
+export const MAX_BUGS = 18;
+export const SPAWN_EVERY = 0.2;
+/** Bugs que ya están en el estanque al empezar la ronda. */
+export const INITIAL_BUGS = 8;
 export const BUG_LIFETIME = 6;
 
 // Estadísticas
@@ -136,7 +138,7 @@ export const BOT_STEER = 6;
 /** Distancia mínima entre el jugador y los bots al iniciar. */
 export const BOT_SPAWN_CLEARANCE = 90;
 /** Distancia extra que "ve" un bot en un bug que ya persigue otro bot. */
-export const BOT_CROWD_PENALTY = 70;
+export const BOT_CROWD_PENALTY = 120;
 /** Distancia mínima entre bots antes de empujarse suavemente. */
 export const BOT_SEPARATION = 34;
 export const BOT_SEPARATION_PUSH = 40;
