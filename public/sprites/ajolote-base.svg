@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="200" height="100">
+  <!-- Ajolote base v1 · Ajolotes en Producción.
+       Para cambiar de stack, reemplaza los valores de --piel, --panza y --branquias
+       en este <style> antes de convertir el SVG a imagen para el canvas. -->
+  <style>
+    svg { --piel: #61DAFB; --panza: #CFF4FE; --branquias: #149ECA; --contorno: #2A1F2D; --grosor: 4.5px; }
+    .piel { fill: var(--piel); }
+    .panza { fill: var(--panza); }
+    .branquia { fill: var(--branquias); }
+    .trazo { stroke: var(--contorno); stroke-width: var(--grosor); stroke-linejoin: round; }
+    .solo-trazo { fill: none; stroke: var(--contorno); stroke-width: var(--grosor); stroke-linejoin: round; }
+  </style>
+
+  <g id="branquias">
+    <path class="branquia trazo" transform="translate(140 30) rotate(-116.6)" d="M0 -4.5 C4 -6 7 -9.5 10.5 -8 C12.5 -11 16.5 -11 17.5 -8 C20 -10.5 24.5 -9.5 25.5 -6 C28 -3 28 2.5 25 4.5 C17 6.5 7 6.5 0 4.5 Z"/>
+    <path class="branquia trazo" transform="translate(130 34) rotate(-140.7)" d="M0 -4.5 C4 -6 7 -9.5 10.5 -8 C12.5 -11 16.5 -11 17.5 -8 C20 -10.5 24.5 -9.5 25.5 -6 C28 -3 28 2.5 25 4.5 C17 6.5 7 6.5 0 4.5 Z"/>
+    <path class="branquia trazo" transform="translate(122 42) rotate(-155.6)" d="M0 -4.5 C4 -6 7 -9.5 10.5 -8 C12.5 -11 16.5 -11 17.5 -8 C20 -10.5 24.5 -9.5 25.5 -6 C28 -3 28 2.5 25 4.5 C17 6.5 7 6.5 0 4.5 Z"/>
+  </g>
+
+  <g id="cuerpo">
+    <g id="patas">
+      <path class="piel trazo" d="M58 70 C57 80 58 86 56 90 C54 93 58 95 61 93 C62 95 66 95 67 92 C69 94 73 92 71 89 C70 84 71 78 72 70 Z"/>
+      <path class="piel trazo" d="M104 70 C103 80 104 86 102 90 C100 93 104 95 107 93 C108 95 112 95 113 92 C115 94 119 92 117 89 C116 84 117 78 118 70 Z"/>
+    </g>
+    <path id="cuerpo-relleno" class="piel" d="M128 44 C112 40 96 38 80 40 C62 42 44 36 26 40 C14 43 6 50 4 56 C12 62 26 68 44 72 C64 78 96 82 130 74 Z"/>
+    <g id="panza">
+      <path class="panza" d="M80 40 C62 42 44 36 26 40 C14 43 6 50 4 56 C20 51 48 47 84 48 Z"/>
+      <path class="panza" d="M44 72 C64 78 96 82 130 74 L130 66 C100 72 68 70 44 72 Z"/>
+    </g>
+    <path id="contorno" class="solo-trazo" d="M128 44 C112 40 96 38 80 40 C62 42 44 36 26 40 C14 43 6 50 4 56 C12 62 26 68 44 72 C64 78 96 82 130 74 Z"/>
+  </g>
+
+  <g id="cabeza">
+    <ellipse class="piel trazo" cx="152" cy="52" rx="38" ry="28"/>
+  </g>
+
+  <g id="cara">
+    <ellipse id="mejilla" cx="162" cy="58" rx="6.5" ry="3.8" fill="#FF8FA3" opacity="0.55"/>
+    <g id="ojos">
+      <circle cx="171" cy="44" r="5.5" fill="#1E1620"/>
+      <circle cx="173" cy="42" r="1.9" fill="#FFFFFF"/>
+    </g>
+    <path id="sonrisa" d="M166 64 Q178 70 188 60" fill="none" stroke="#2A1F2D" stroke-width="3.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Anclas para accesorios: cada accesorio tiene su punto de apoyo en (0,0) y se coloca aquí -->
+  <circle id="ancla-cabeza" cx="152" cy="24" r="0"/>
+  <circle id="ancla-ojos" cx="171" cy="44" r="0"/>
+</svg>

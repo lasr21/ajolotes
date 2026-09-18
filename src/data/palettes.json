@@ -1,0 +1,6 @@
+{
+  "react":   { "piel": "#61DAFB", "panza": "#CFF4FE", "branquias": "#149ECA" },
+  "vue":     { "piel": "#42B883", "panza": "#C8EEDB", "branquias": "#2C8C63" },
+  "angular": { "piel": "#F0406A", "panza": "#FBD0DC", "branquias": "#B8002A" },
+  "svelte":  { "piel": "#FF6A33", "panza": "#FFD6C4", "branquias": "#D93400" }
+}
