@@ -1,42 +1,42 @@
 {
   "react": [
-    "Quedaste en el lugar {place} de {total} con {score} puntos; demasiados renders para tan poco estado. Nos vemos en JSConf MX.",
-    "{score} puntos y una racha de {bestStreak}: tu useEffect corrió más veces que tú. Ven a JSConf MX a aprender de dependencias.",
-    "Lugar {place} de {total}, y seguro le echas la culpa al re-render. En JSConf MX te enseñamos a memoizar hasta las excusas.",
-    "{beatenBy} te ganó y ni siquiera usa hooks. Consuélate en JSConf MX, ahí todos hemos perdido contra alguien así.",
-    "Racha máxima de {bestStreak} y luego el estado se te desincronizó, como siempre. Trae ese componente a JSConf MX y lo revisamos.",
-    "{score} puntos: suficiente para un demo, insuficiente para producción. En JSConf MX hay talleres para eso.",
-    "Quedaste {place} de {total}; el Virtual DOM hizo lo que pudo con tu input. Nos vemos en JSConf MX para el hotfix.",
-    "Te faltó un key en cada bug que dejaste pasar, y {beatenBy} lo notó. Ven a JSConf MX antes del siguiente sprint."
+    "Quedaste en el lugar {place} de {total} con {score} puntos; demasiados renders para tan poco estado. Memoiza algo, aunque sea la vergüenza.",
+    "{score} puntos y una racha de {bestStreak}: tu useEffect corrió más veces que tú. Revisa el arreglo de dependencias antes de volver a nadar.",
+    "Lugar {place} de {total}, y seguro le echas la culpa al re-render. El Virtual DOM hizo su parte; tú no tanto.",
+    "{beatenBy} te ganó y ni siquiera usa hooks. Consuélate: todos hemos perdido contra alguien así.",
+    "Racha máxima de {bestStreak} y luego el estado se te desincronizó, como siempre. Ese componente necesita un refactor urgente.",
+    "{score} puntos: suficiente para un demo, insuficiente para producción. Hay que hacer profiling de esos reflejos.",
+    "Quedaste {place} de {total}; el Virtual DOM hizo lo que pudo con tu input. Falta un hotfix en la puntería.",
+    "Te faltó un key en cada bug que dejaste pasar, y {beatenBy} lo notó. Corrige los warnings antes del siguiente sprint."
   ],
   "vue": [
-    "Quedaste en el lugar {place} de {total} con {score} puntos; muy reactivo para lo fácil y muy lento para lo pesado. Nos vemos en JSConf MX.",
-    "{score} puntos y una racha de {bestStreak}: tu watcher despertó tarde. En JSConf MX te explicamos computed con calma.",
-    "Lugar {place} de {total}; el ajolote necesitaba un v-if y le pusiste v-show. Ven a JSConf MX a discutirlo con propiedad.",
-    "{beatenBy} te ganó con menos magia y más puntería. Recupérate en JSConf MX, hay café.",
-    "Racha de {bestStreak} y luego perdiste la reactividad, literal. Trae tu store a JSConf MX y lo depuramos.",
-    "{score} puntos: tu Composition API compuso poquito. En JSConf MX hay sesiones para eso.",
-    "Quedaste {place} de {total}; buen template, mala ejecución. Nos vemos en JSConf MX para el refactor.",
-    "Dejaste pasar bugs como props sin declarar, y {beatenBy} lo aprovechó. Ven a JSConf MX antes del release."
+    "Quedaste en el lugar {place} de {total} con {score} puntos; muy reactivo para lo fácil y muy lento para lo pesado. Un computed te habría ahorrado el bochorno.",
+    "{score} puntos y una racha de {bestStreak}: tu watcher despertó tarde. La reactividad no sustituye los reflejos.",
+    "Lugar {place} de {total}; el ajolote necesitaba un v-if y le pusiste v-show. Estuvo ahí todo el tiempo, sin hacer nada.",
+    "{beatenBy} te ganó con menos magia y más puntería. Ni Pinia te salva de eso.",
+    "Racha de {bestStreak} y luego perdiste la reactividad, literal. Alguien mutó el estado sin avisar.",
+    "{score} puntos: tu Composition API compuso poquito. Falta setup y sobra template.",
+    "Quedaste {place} de {total}; buen template, mala ejecución. El refactor va para el siguiente sprint.",
+    "Dejaste pasar bugs como props sin declarar, y {beatenBy} los aprovechó. Define tus props y tus prioridades."
   ],
   "angular": [
-    "Quedaste en el lugar {place} de {total} con {score} puntos; tu módulo necesita importar el módulo de la paciencia. Nos vemos en JSConf MX.",
-    "{score} puntos y una racha de {bestStreak}: la inyección de dependencias no inyectó velocidad. En JSConf MX lo revisamos con calma.",
-    "Lugar {place} de {total}; el ajolote hizo change detection y decidió no cambiar nada. Ven a JSConf MX a probar signals.",
-    "{beatenBy} te ganó sin un solo decorador. Consuélate en JSConf MX, ahí valoramos la arquitectura.",
-    "Racha de {bestStreak} y luego te quedaste esperando un Observable que nunca emitió. Trae tu suscripción a JSConf MX.",
-    "{score} puntos: sólido, tipado y lento, como buen proyecto enterprise. En JSConf MX hay talleres de rendimiento.",
-    "Quedaste {place} de {total}; el strict mode no aplica a los reflejos. Nos vemos en JSConf MX para el code review.",
-    "Cada bug que dejaste pasar era un módulo sin lazy loading, y {beatenBy} los cargó primero. Ven a JSConf MX antes del sprint."
+    "Quedaste en el lugar {place} de {total} con {score} puntos; tu módulo necesita importar el módulo de la paciencia. Al menos quedó bien tipado.",
+    "{score} puntos y una racha de {bestStreak}: la inyección de dependencias no inyectó velocidad. Eso no viene en el decorador.",
+    "Lugar {place} de {total}; el ajolote hizo change detection y decidió no cambiar nada. Prueba signals, o prueba moverte.",
+    "{beatenBy} te ganó sin un solo decorador. La arquitectura no siempre gana carreras.",
+    "Racha de {bestStreak} y luego te quedaste esperando un Observable que nunca emitió. Revisa esa suscripción antes de que haga fuga.",
+    "{score} puntos: sólido, tipado y lento, como buen proyecto enterprise. El rendimiento va en el backlog.",
+    "Quedaste {place} de {total}; el strict mode no aplica a los reflejos. Ya lo verificamos.",
+    "Cada bug que dejaste pasar era un módulo sin lazy loading, y {beatenBy} los cargó primero. Optimiza el bundle y la puntería."
   ],
   "svelte": [
-    "Quedaste en el lugar {place} de {total} con {score} puntos; compilaste tan bien que ni runtime necesitaste para moverte. Nos vemos en JSConf MX.",
-    "{score} puntos y una racha de {bestStreak}: sin virtual DOM y sin excusas, y aun así. En JSConf MX te enseñamos a desaparecer bugs.",
-    "Lugar {place} de {total}; el bundle salió chiquito y el marcador también. Ven a JSConf MX a compensarlo.",
-    "{beatenBy} te ganó con más runtime y menos estilo. Recupérate en JSConf MX, ahí sí te van a entender.",
-    "Racha de {bestStreak} y luego te distrajiste, muy Svelte de tu parte. Trae tu store a JSConf MX y lo revisamos.",
-    "{score} puntos: reactivo en tiempo de compilación, distraído en tiempo de ejecución. En JSConf MX hay sesiones para eso.",
-    "Quedaste {place} de {total}; el signo de pesos no te alcanzó para más puntos. Nos vemos en JSConf MX para el refactor.",
-    "Dejaste pasar bugs como si fueran warnings del compilador, y {beatenBy} no. Ven a JSConf MX antes del siguiente deploy."
+    "Quedaste en el lugar {place} de {total} con {score} puntos; compilaste tan bien que ni runtime necesitaste para moverte. Se notó.",
+    "{score} puntos y una racha de {bestStreak}: sin virtual DOM y sin excusas, y aun así. La magia se queda en tiempo de compilación.",
+    "Lugar {place} de {total}; el bundle salió chiquito y el marcador también. Al menos hay consistencia.",
+    "{beatenBy} te ganó con más runtime y menos estilo. Dolió, pero fue justo.",
+    "Racha de {bestStreak} y luego te distrajiste, muy Svelte de tu parte. Ese store necesita un derived de concentración.",
+    "{score} puntos: reactivo en tiempo de compilación, distraído en tiempo de ejecución. Clásico.",
+    "Quedaste {place} de {total}; el signo de pesos no te alcanzó para más puntos. La reactividad no cobra en puntos.",
+    "Dejaste pasar bugs como si fueran warnings del compilador, y {beatenBy} no. Los warnings también cuentan."
   ]
 }

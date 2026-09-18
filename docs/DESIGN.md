@@ -495,3 +495,9 @@ Antes del demo:
 - Visto bueno del equipo de JSConf MX para usar la marca, y si hay logo para la tarjeta OG.
 - Horas disponibles en el hackathon, para decidir dónde cortar.
 - Dominio: `*.vercel.app` o un subdominio de JSConf MX.
+
+---
+
+## 14. Decisiones posteriores a la versión 1
+
+- **17 de septiembre de 2026.** Sin promoción: el code review no invita a JSConf MX, las reseñas de respaldo tampoco, y la pantalla de resultados no lleva botón de boletos ni QR a boletos. Sustituye lo que dicen §3.3, §7.3, §7.4, §7.5 y §8.1 sobre boletos e invitaciones. `NEXT_PUBLIC_TICKETS_URL` deja de usarse. El nombre del juego y la temática se conservan.

@@ -13,7 +13,7 @@ Reglas:
 - Búrlate del stack, del framework o de sus decisiones en el juego, nunca de la persona.
 - Tono de compa sarcástico pero cariñoso, en español de México. Puedes usar jerga de JavaScript.
 - Sin groserías, sin insultos, sin emojis, sin hashtags.
-- Cierra con una invitación breve a JSConf MX.
+- Cierra con un remate breve. No promociones eventos, productos ni ligas.
 - Responde solo con el texto del review, sin comillas.
 - Cada mensaje es una persona distinta jugando por primera vez: no compares con rondas anteriores ni digas que "volvió".`;
 
@@ -54,7 +54,7 @@ const EXAMPLES: { stats: ValidatedRoundStats; review: string }[] = [
       winner: { name: "Senior_Tamal", stack: "angular", score: 26 },
     }),
     review:
-      "Te comiste 9 NaN pero dejaste pasar todos los [object Object], muy reactivo para lo fácil y muy lento para lo pesado. Senior_Tamal te ganó con Angular; nos vemos en JSConf MX para el refactor.",
+      "Te comiste 9 NaN pero dejaste pasar todos los [object Object], muy reactivo para lo fácil y muy lento para lo pesado. Senior_Tamal te ganó con Angular; el refactor te lo dejo de tarea.",
   },
   {
     stats: example({
@@ -69,7 +69,7 @@ const EXAMPLES: { stats: ValidatedRoundStats; review: string }[] = [
       winner: { name: "Vanilla_God", stack: "svelte", score: 19 },
     }),
     review:
-      "Dos deploys en viernes y quinto lugar: tu módulo necesita importar el módulo de la paciencia. En JSConf MX te explicamos la inyección de dependencias con calma.",
+      "Dos deploys en viernes y quinto lugar: tu módulo necesita importar el módulo de la paciencia. La inyección de dependencias no inyecta reflejos, ya quedó demostrado.",
   },
   {
     stats: example({
@@ -81,7 +81,7 @@ const EXAMPLES: { stats: ValidatedRoundStats; review: string }[] = [
       place: 1,
     }),
     review:
-      "Primer lugar y una racha de 7, y encima atrapaste el funciona en mi máquina; seguro tu useEffect trae el arreglo vacío y la conciencia tranquila. Ven a presumirlo a JSConf MX.",
+      "Primer lugar y una racha de 7, y encima atrapaste el funciona en mi máquina; seguro tu useEffect trae el arreglo vacío y la conciencia tranquila. Aprobado, pero no te acostumbres.",
   },
   {
     stats: example({
@@ -96,7 +96,7 @@ const EXAMPLES: { stats: ValidatedRoundStats; review: string }[] = [
       winner: { name: "Rerender_Rey", stack: "react", score: 20 },
     }),
     review:
-      "Seis segundos quieto: compilaste tan bien que ni runtime necesitaste para moverte. Tercer lugar, nada mal; en JSConf MX te enseñamos a desaparecer bugs en vez de mirarlos.",
+      "Seis segundos quieto: compilaste tan bien que ni runtime necesitaste para moverte. Tercer lugar, nada mal; la próxima intenta desaparecer bugs en vez de mirarlos.",
   },
 ];
 

@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Ajolotes en Producción",
   description:
-    "Tu ajolote contra los bugs de JavaScript. 20 segundos. Un minijuego para JSConf MX 2026.",
+    "Tu ajolote contra los bugs de JavaScript. 20 segundos y un code review sarcástico.",
 };
 
 export const viewport: Viewport = {
