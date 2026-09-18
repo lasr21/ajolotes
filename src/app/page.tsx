@@ -1,33 +1,34 @@
+"use client";
+
+import { useState } from "react";
+import CustomizeScreen from "@/components/CustomizeScreen";
+import type { PlayerConfig } from "@/game/types";
+
+type Screen = "customize" | "playing" | "results";
+
+const DEFAULT_CONFIG: PlayerConfig = { stack: "react", accessory: "none" };
+
 export default function Home() {
+  const [screen, setScreen] = useState<Screen>("customize");
+  const [config, setConfig] = useState<PlayerConfig>(DEFAULT_CONFIG);
+
+  if (screen === "customize") {
+    return (
+      <CustomizeScreen config={config} onChange={setConfig} onPlay={() => setScreen("playing")} />
+    );
+  }
+
+  // Estanque y resultados llegan en M2 y M5.
   return (
-    <main className="flex flex-1 flex-col items-center justify-center px-4 py-8">
-      <div className="flex w-full max-w-[390px] flex-col items-center gap-8 text-center">
-        <header className="flex flex-col gap-3">
-          <h1 className="text-4xl font-semibold leading-tight text-trajinera">
-            Ajolotes en Producción
-          </h1>
-          <p className="text-lg text-lirio/90">
-            Tu ajolote contra los bugs de JavaScript. 20 segundos.
-          </p>
-        </header>
-
-        <div
-          aria-hidden="true"
-          className="h-40 w-[280px] rounded-3xl border-4 border-agua-profunda bg-agua-profunda/40"
-        />
-
-        <button
-          type="button"
-          disabled
-          className="min-h-11 w-full rounded-2xl bg-trajinera px-6 py-3 text-lg font-semibold text-tinta disabled:cursor-not-allowed disabled:opacity-60"
-        >
-          Jugar
-        </button>
-
-        <p className="text-sm text-lirio/70">
-          Un minijuego para JSConf MX 2026, Guadalajara.
-        </p>
-      </div>
+    <main className="flex flex-1 flex-col items-center justify-center gap-6 px-4 text-center">
+      <p className="text-lg text-lirio/90">El estanque todavía está en construcción.</p>
+      <button
+        type="button"
+        onClick={() => setScreen("customize")}
+        className="min-h-11 rounded-2xl border-2 border-lirio/40 px-5 py-2 text-base font-semibold text-lirio"
+      >
+        Cambiar ajolote
+      </button>
     </main>
   );
 }

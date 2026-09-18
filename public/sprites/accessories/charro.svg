@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-56 -30 112 44" width="112" height="44">
+  <!-- Sombrero de charro. Punto de apoyo (0,0): base del sombrero, sobre la cabeza.
+       Unidades del viewBox 200×100 del ajolote. Guiño a Guadalajara. -->
+  <path d="M-19 2 C-18 -10 -12 -17 0 -19 C12 -17 18 -10 19 2 Z" fill="#3B2A22" stroke="#2A1F2D" stroke-width="4.5" stroke-linejoin="round"/>
+  <path d="M-48 -12 C-44 -2 -32 1 -20 1 L20 1 C32 1 42 -2 46 -12 C44 4 26 8 0 8 C-26 8 -44 4 -48 -12 Z" fill="#3B2A22" stroke="#2A1F2D" stroke-width="4.5" stroke-linejoin="round"/>
+  <path d="M-17 -4 C-10 -1 10 -1 17 -4 L15 -10 C8 -7 -8 -7 -15 -10 Z" fill="#FFC83D" stroke="#2A1F2D" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M-36 -3 C-18 5 18 5 36 -3" fill="none" stroke="#FFC83D" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

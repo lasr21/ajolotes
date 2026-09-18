@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-46 -14 64 28" width="64" height="28">
+  <!-- Lentes de sol. Punto de apoyo (0,0): centro del lente, sobre el ojo.
+       Unidades del viewBox 200×100 del ajolote. -->
+  <path d="M-13 -3 L-40 -7" fill="none" stroke="#2A1F2D" stroke-width="4.5" stroke-linecap="round"/>
+  <rect x="-13" y="-8" width="26" height="16" rx="6" fill="#2B2133" stroke="#2A1F2D" stroke-width="4.5"/>
+  <path d="M-7 -3 L1 -3" fill="none" stroke="#FFFFFF" opacity="0.55" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
