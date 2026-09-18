@@ -45,3 +45,50 @@ export const SWIM_AMPLITUDE_REDUCED = 0.5;
 export const SWIM_BOB_AMPLITUDE = 1;
 export const SWIM_BOB_HZ = 1.5;
 export const FLIP_HYSTERESIS = 15;
+
+// Movimiento de bugs
+/** Velocidad con la que un bug expirado se va nadando fuera del estanque. */
+export const BUG_LEAVE_SPEED = 140;
+/** Zigzag de NaN: frecuencia (Hz) y velocidad lateral (u/s). */
+export const ZIGZAG_HZ = 1.6;
+export const ZIGZAG_SIDE_SPEED = 60;
+/** Margen desde el borde al aparecer y al rebotar. */
+export const SPAWN_MARGIN = 28;
+/** Radio de colisión máximo de una burbuja. */
+export const BUG_MAX_RADIUS = 20;
+/** Segundos antes de expirar en los que la burbuja parpadea. */
+export const BUG_WARN_SECONDS = 1.2;
+
+// Dibujo de burbujas y etiquetas (unidades de mundo)
+export const BUBBLE_PAD_X = 8;
+export const BUBBLE_HEIGHT = 22;
+export const BUBBLE_HEIGHT_BIG = 26;
+export const BUBBLE_FONT = 12;
+export const BUBBLE_FONT_BIG = 13;
+export const LABEL_FONT = 10;
+export const LABEL_GAP = 6;
+
+// HUD (unidades de mundo)
+export const HUD_PAD = 12;
+export const HUD_FONT = 16;
+export const HUD_TIME_FONT = 28;
+
+// Nado: velocidad angular base y por unidad de velocidad, y desfase entre tiras.
+export const SWIM_OMEGA_BASE = 4;
+export const SWIM_OMEGA_PER_SPEED = 0.03;
+export const SWIM_WAVE_K = 0.55;
+
+// Burbujas decorativas del fondo (se apagan con prefers-reduced-motion)
+export const DECOR_BUBBLES = 10;
+export const DECOR_BUBBLE_SPEED = 18;
+
+/** Colores del estanque, tomados de los tokens de DESIGN.md §4. */
+export const COLORS = {
+  agua: "#0E4A55",
+  aguaProfunda: "#09343C",
+  lirio: "#EAF4EF",
+  tinta: "#2A1F2D",
+  trajinera: "#FFC83D",
+  bug: "#FFE27A",
+  viernes: "#C81E3A",
+} as const;
